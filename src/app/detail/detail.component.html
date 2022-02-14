@@ -1,0 +1,22 @@
+<div class="container">
+    <button routerLink="/create" class="float:right">ADD</button>
+    <table class="table table-bordered">
+        <input type="text" class="form-control" name="name" [(ngModel)]="name" (ngModelChange)="search()" placeholder="search by user name">
+            <tr>
+                <th (click)="sort('name')">Name&nbsp;<i class="fa fa-sort"></i></th>
+                <th>Email</th>
+                <th>Actions</th>
+                <br>
+            </tr>
+            <tr *ngFor="let dt of ar |  paginate: { itemsPerPage: 2, currentPage: p } | orderBy: key1: re">
+                <td>{{dt.name}}</td>
+                <td>{{dt.email}}</td>
+                <td class="btn btn-sm btn-primary " (click)="clickme(dt.email)" routerLink="/view">View</td>&nbsp;&nbsp;
+                <td class="btn btn-sm btn-primary " (click)="clickme(dt.email)" routerLink="/update">Update</td>&nbsp;&nbsp;
+                <td class="btn btn-sm btn-warning " (click)="clickme(dt.email)" routerLink="/delete">Delete</td>
+                <hr>
+            </tr>
+            
+    </table>
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>

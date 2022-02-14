@@ -1,0 +1,76 @@
+<b>add user</b>
+<div *ngIf="!submitted">
+<div class="form-group">
+ <label for="Name">Name</label>
+ <input type="text" class="form-control" id="name" required [(ngModel)]="adduser.name" name="name"/></div>
+ <label for="Email">Email</label>
+ <input type="text" class="form-control" id="email" required [(ngModel)]="adduser.email" name="Email"/>
+   <div class="form-group">
+<label for="mobile">mobile</label>
+<input type="text" class="form-control" id="mobile" required [(ngModel)]="adduser.mobile" name="mobile"/></div>
+<label for="Gender">Gender</label>
+<input type="text" class="form-control" id="Gender" required [(ngModel)]="adduser.gender" name="Gender"/>
+<label for="Password">Password</label>
+<input type="password" class="form-control" id="Password" required  [(ngModel)]="adduser.password" name="Password"/>
+ <button (click)="saveUser()" class="btn btn-success">Submit</button>
+ <button class="btn btn-info" style="float: right;"  routerLink="/signin">Back</button>
+ </div>
+     <div *ngIf="submitted">
+
+        <h4>submitted successfully</h4>
+    
+        <button class="btn btn-success mr-5" (click)="newUser()">add</button>
+    
+        <button class="btn btn-info" routerLink="/signin" >Back</button>
+    
+      </div>
+      
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+      
+
+    
+
+
+
+
+
+
+
+        
+
+        
+
+        
+
+        
+
+       
+
+        
+
+     
+
+    
+
+
+
+    
+
+ 
+
+
+
+  
+

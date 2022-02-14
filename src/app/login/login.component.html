@@ -1,0 +1,25 @@
+<div class="bg-image" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/100.jpg');
+            height: 100vh">
+    <div class="container">
+        <form [formGroup]="loginform">
+            <h1 class="h3 mb-3 font-weight-normal" style="color: azure">Please sign in</h1>
+            <label for="email" class="sr-only" style="color: azure">Email Address</label>
+            <input type="email" id="email" class="form-control" formControlName="email" placeholder="Email address"
+                required autofocus>
+            <span class="text-danger" *ngIf="email?.invalid && email?.touched">email is invalid</span>
+            <br>
+            
+                <label for="password" class="sr-only" style="color: azure">Password</label>
+                <i class="material-icons" matSuffix (click) = "hide = !hide">
+                        {{hide ? 'visibility' : 'visibility_off'}}
+                    </i>
+                <input matInput type="password" [type]="hide ? 'password' : 'text'" id="password" class="form-control" formControlName="password"
+                    placeholder="Password">
+                <span class="text-danger" *ngIf="password?.invalid && password?.touched">password is invalid</span>
+            
+            <br>
+            <button class= "btn btn-lg btn-primary btn-block" type="submit" [disabled]="loginform.invalid" (click)="check1()"><a class="nav-link" routerLink="/signin"></a>
+              Sign in</button>
+            
+        </form>
+        

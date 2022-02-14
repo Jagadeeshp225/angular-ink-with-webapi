@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+ 
+.container { 
+    padding-top: 100px;
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+  i{
+      display: inline-block;
+      position: absolute;
+      transform: translate(640px,30px);
+  }
